@@ -51,7 +51,7 @@
                 map.fitBounds(trackLayer.getBounds());
 
                 trackLayer.eachLayer(function(layer) {
-                    layer.bindPopup(layer.feature.properties.Time);
+                    layer.bindPopup(layer.feature.properties.Time + ' ' + layer.feature.properties.Text);
                 })
             })
             .on('mouseover', function(e) { e.layer.openPopup(); })
